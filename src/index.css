@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+    height: 100%;
+    background-color: #2D3033;
+    color: white;
+}
+
+
+@layer components {
+    .btnRed{
+        border: 2px solid #C70000;
+        padding: 12px 24px; 
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+        
+    }
+
+    .btnRed:hover {
+        background: #C70000;
+    }
+
+    .paddings {
+        padding-left: 128px; 
+        padding-right: 128px;
+    }
+
+}
