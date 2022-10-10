@@ -1,14 +1,14 @@
 import React, { FC } from "react";
 import { NavBar } from "./NavBar";
 import { GridShop } from "./GridShop";
-import { Link } from "react-router-dom";
+import { json, Link } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import { Footer } from "./Footer";
 import { useState } from "react";
 import data from "./categories.json";
-
+import { nanoid } from "nanoid";
 
 export interface dataCategories {
   h2: string;
@@ -57,23 +57,28 @@ export interface dataCategories {
   };
 }
 
-
-
 export const Shop: FC = () => {
-  
-  
-  // const [btns, setbtns] = useState([])
+  const [btns, setbtns] = useState<boolean[]>([true, false, false, false]);
+  const botones: any = [
+    { titulo: "GPU" },
+    { titulo: "CPU" },
+    { titulo: "laptops" },
+    { titulo: "Pc" },
+  ];
+  const nums: number[] = [1, 2, 3, 4, 5, 6, 7, 8];
+  const [items, setItems] = useState<dataCategories>(data.categories.gpu);
 
-  const [items, setItems] = useState<dataCategories >(
-    data.categories.gpu
-  );
-  
-  type itemType = "gpu" | "cpu" | "laptop" | "pc"
-  
-  const setglobalItems = (item: itemType, ) => {
+  interface currentInterface {
+    titulo: string;
+  }
+
+  type itemType = "gpu" | "cpu" | "laptop" | "pc";
+
+  const setglobalItems = (item: itemType, idx: number) => {
     setItems(data.categories[item]);
-    // const newArr = [...btns.filter((current) => !current)];
-  
+    let newBtnState: boolean[] = [false, false, false, false];
+    newBtnState[idx] = true;
+    setbtns(newBtnState);
   };
 
   return (
@@ -89,38 +94,24 @@ export const Shop: FC = () => {
       <div className="md:paddings pt-12 pb-12">
         <div className=" flex md:justify-between  justify-around flex-wrap gap-4 ">
           <div className="flex  flex-wrap justify-center items-center  gap-2 ">
-            <button
-              onClick={() => {
-                setglobalItems("gpu");
-              }}
-              className="btnRed md:min-w-[152px] text-sm bg-black pl-2 pr-2 "
-            >
-              GPU
-            </button>
-            <button
-              onClick={() => {
-                setglobalItems("cpu");
-              }}
-              className="btnRed md:min-w-[152px] text-sm pl-2 pr-2"
-            >
-              CPU
-            </button>
-            <button
-              onClick={() => {
-                setglobalItems("laptop");
-              }}
-              className="btnRed md:min-w-[152px] text-sm pl-2 pr-2"
-            >
-              Laptops
-            </button>
-            <button
-              onClick={() => {
-                setglobalItems("pc");
-              }}
-              className="btnRed md:min-w-[152px] text-sm pl-2 pr-2"
-            >
-              Escritorio
-            </button>
+            {botones.map((current: currentInterface, idx: number) => {
+              let item: string = current.titulo.toLowerCase();
+              let itemCast: itemType = item as itemType;
+
+              return (
+                <button
+                  onClick={() => {
+                    setglobalItems(itemCast, idx);
+                  }}
+                  key={nanoid()}
+                  className={`${
+                    btns[idx] ? "bg-black" : ""
+                  } btnRed md:min-w-[152px] text-sm pl-2 pr-2`}
+                >
+                  {current.titulo}
+                </button>
+              );
+            })}
           </div>
           <div className="flex  items-center justify-end  flex-row  gap-3">
             <span>Ordenar por: </span>
@@ -128,8 +119,6 @@ export const Shop: FC = () => {
               Popularidad <IoIosArrowDown />{" "}
             </button>
           </div>
-
-          <div className="hidden  p-3">Mostrando 8 productos</div>
         </div>
       </div>
 
@@ -139,14 +128,17 @@ export const Shop: FC = () => {
         <div className="flex items-center  justify-center">
           <IoIosArrowBack color="#C70000" className="mr-3 cursor-pointer " />
           <div>
-            <button className="p-4 text-seconday ">1</button>{" "}
-            <button className="p-4  ">2</button>{" "}
-            <button className="p-4  ">3</button>
-            <button className="p-4  ">4</button>{" "}
-            <button className="p-4  ">5</button>{" "}
-            <button className="p-4  ">6</button>
-            <button className="p-4  ">7</button>{" "}
-            <button className="p-4  ">8</button>
+            {nums.map((current: number, idx) => {
+              return (
+                <button
+                  key={nanoid()}
+                  className={`${current === 1 ? "text-seconday" : ""} p-4`}
+                >
+                  {" "}
+                  {current}
+                </button>
+              );
+            })}
           </div>
           <IoIosArrowForward
             className="ml-3 cursor-pointer   "

@@ -37,7 +37,7 @@ describe("Shop component", () => {
 
 
   it('Should have change category, imgs and description of category when the user click on one link', async () => {
-    const  btn = screen.getByRole('button', {  name: /laptops/i})
+    const  btn =  screen.getByRole('button', {  name: /laptops/i})
     const user = userEvent.setup()
     user.click(btn)
 
