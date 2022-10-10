@@ -13,6 +13,11 @@ export const Login = () => {
   const { setLogin, logInState } = useContext(GlobalContext);
   const navigate = useNavigate();
 
+
+  console.log(setLogin, logInState);
+  
+
+
   const validateInfo = () => {
     if (inputInfo?.email === "greyexample@gmail.com" && inputInfo.pass === "12345") {
       setLogin({

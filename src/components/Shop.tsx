@@ -72,7 +72,7 @@ export const Shop: FC = () => {
     titulo: string;
   }
 
-  type itemType = "gpu" | "cpu" | "laptop" | "pc";
+  type itemType = "gpu" | "cpu" | "laptops" | "pc";
 
   const setglobalItems = (item: itemType, idx: number) => {
     setItems(data.categories[item]);

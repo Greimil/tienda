@@ -5,6 +5,13 @@ import { Shop } from "./Shop";
 import { Login } from "./Login";
 
 
+ export type ContextType = {
+  logInState?: typeLogin;
+  setLogin?: React.Dispatch<React.SetStateAction<typeLogin>>;
+  carrito?: ObjCarrito[];
+  setCarrito?: React.Dispatch<React.SetStateAction<ObjCarrito[]>>;
+}
+
 export type ObjCarrito = {
   titulo: string;
   precio: number;
@@ -12,7 +19,22 @@ export type ObjCarrito = {
   descripción: string;
 };
 
-export const GlobalContext = createContext<any>(null);
+
+const obj = {
+  logInState: {
+    user: {
+      name: "Grey",
+      email: "greyexample@gmail.com",
+    },
+    pass: "12345",
+    logIn: false,
+  }, setLogin: () => {},
+  carrito: [],
+  setCarrito: () => {},
+
+}
+
+export const GlobalContext = createContext<ContextType>(obj);
 
 export type typeLogin = {
   user?: {
@@ -33,6 +55,15 @@ const Wrapper: FC = () => {
     logIn: false,
   });
   const [carrito, setCarrito] = useState<Array<ObjCarrito>>([]);
+
+
+  let obj = {
+    logInState: logIn,
+    setLogin,
+    carrito,
+    setCarrito,
+  }
+
 
   return (
     <GlobalContext.Provider

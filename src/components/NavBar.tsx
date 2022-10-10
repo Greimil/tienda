@@ -12,12 +12,9 @@ interface Props {
 
 export const NavBar: FC<Props> = ({ question }) => {
   const location = useLocation();
-  const { carrito, setCarrito, setLogin, logInState }: any =
-    useContext(GlobalContext);
+  const { carrito, setCarrito, setLogin, logInState } = useContext(GlobalContext);
   
-    console.log(carrito);
-    
-
+  
   
   let stateLogin: boolean = logInState.logIn;
 
