@@ -9,6 +9,12 @@ import { Footer } from "./Footer";
 import { useState } from "react";
 import data from "./categories.json";
 import { nanoid } from "nanoid";
+import { Product } from "./Product";
+
+
+
+
+
 
 export interface dataCategories {
   h2: string;
@@ -84,7 +90,7 @@ export const Shop: FC = () => {
   return (
     <>
       <NavBar />
-      <div className="bg-blackPrimary p-4 md:paddings pb-4 pt-4 ">
+      <div className="bg-blackPrimary p-4 md:paddings pb-4 pt-4 font-mono ">
         <h2 className="font-semibold text-4xl" data-testid="xdxd">
           {items.h2}
         </h2>
@@ -138,6 +144,7 @@ export const Shop: FC = () => {
                   {current}
                 </button>
               );
+
             })}
           </div>
           <IoIosArrowForward
@@ -148,6 +155,8 @@ export const Shop: FC = () => {
       </div>
 
       <Footer />
+
+      
     </>
   );
 };

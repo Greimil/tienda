@@ -3,7 +3,6 @@ import { afterEach, describe, it, beforeEach, expect } from "vitest";
 import { Login } from "./Login";
 import { GlobalContext } from "./Wrapper";
 import { BrowserRouter } from "react-router-dom";
-import { createContext } from 'react';
 
 
 const obj = {
@@ -21,12 +20,7 @@ const obj = {
 };
   
 
-
-
-
-
    
-
 
 describe("Login Component", () => {
   afterEach(cleanup);

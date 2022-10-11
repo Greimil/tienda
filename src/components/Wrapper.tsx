@@ -3,6 +3,7 @@ import { HashRouter, BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./Home";
 import { Shop } from "./Shop";
 import { Login } from "./Login";
+import { Product } from "./Product";
 
 
  export type ContextType = {
@@ -75,10 +76,11 @@ const Wrapper: FC = () => {
       }}
     >
       <BrowserRouter>
-        <Routes>
+        <Routes> 
           <Route path="/" element={<Home />} />
           <Route path="/tienda" element={<Shop />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/product" element={<Product />}/>
         </Routes>
       </BrowserRouter>
     </GlobalContext.Provider>

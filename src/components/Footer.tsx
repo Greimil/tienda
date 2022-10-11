@@ -2,7 +2,7 @@ import React,{FC} from "react";
 
 export const Footer: FC = () => {
   return (
-    <footer>
+    <footer className="" >
       <div className=" flex justify-center  flex-wrap items-center md:p-6" >
         <div className="flex flex-col gap-2 justify-center items-center md:items-start p-3 max-w-lg" >
           <h3 className="text-2xl md:text-4xl md:text-left text-center" >Regístrate en nuestro Newsletter</h3>

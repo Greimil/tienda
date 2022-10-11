@@ -23,7 +23,7 @@ export const NavBar: FC<Props> = ({ question }) => {
   }, [logInState]);
 
   return (
-    <nav className="bg-blackPrimary text-white  flex justify-between p-4 md:paddings h-16 md:h-20 items-center">
+    <nav className="bg-blackPrimary text-white  flex justify-between p-4 md:paddings h-16 md:h-20 items-center font-mono">
       <div className="flex gap-16">
         <h2 className="text-seconday md:text-1xl font-bold cursor-pointer">
           {" "}
