@@ -9,7 +9,7 @@ import { Footer } from "./Footer";
 import { useState } from "react";
 import data from "./categories.json";
 import { nanoid } from "nanoid";
-import { Product } from "./Product";
+
 
 
 
@@ -24,6 +24,7 @@ export interface dataCategories {
       link: string;
       descrip: string;
       price: string;
+      
     };
     img2: {
       link: string;
@@ -71,7 +72,7 @@ export const Shop: FC = () => {
     { titulo: "laptops" },
     { titulo: "Pc" },
   ];
-  const nums: number[] = [1, 2, 3, 4, 5, 6, 7, 8];
+  const nums: number[] = [1, 2, 3, 4, 5, 6,];
   const [items, setItems] = useState<dataCategories>(data.categories.gpu);
 
   interface currentInterface {

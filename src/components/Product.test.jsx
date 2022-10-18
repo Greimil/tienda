@@ -1,4 +1,4 @@
-import { screen, render, cleanup } from "@testing-library/react";
+import { screen, render, cleanup, findByTestId } from "@testing-library/react";
 import userEvent from "@testing-library/user-event"
 import { describe, it, afterEach, beforeEach, expect } from "vitest";
 import { BrowserRouter } from "react-router-dom";
@@ -49,6 +49,32 @@ describe('Product Component', () => {
     });
     
 
+    it('Should add one item when the user click on the plus sing', async () => {
+        const btn = screen.getByTestId('sumarBtn')
+        const user = userEvent.setup()
+        user.click(btn)
+
+
+        expect(await screen.findByText(/1/i)).toBeInTheDocument()
+
+        
+    });
+    
+
+    it('Should subtract one item when the user click on the subtract sing', async () => {
+        const btnrestar = screen.getByTestId('restarBtn')
+        const btn = screen.getByTestId('sumarBtn')
+        
+        const user = userEvent.setup()
+        
+         user.click(btn)
+         user.click(btnrestar)
+        
+        expect( (await screen.findByTestId("itemsCount")).textContent).toBe("0")
+        
+        screen.debug()
+        
+    });
 
     
 

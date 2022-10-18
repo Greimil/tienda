@@ -80,7 +80,7 @@ const Wrapper: FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/tienda" element={<Shop />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/product" element={<Product />}/>
+          <Route path="/product:id" element={<Product />}/>
         </Routes>
       </BrowserRouter>
     </GlobalContext.Provider>

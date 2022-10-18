@@ -1,32 +1,41 @@
-import React, { FC } from "react";
+import React, { FC, useState, useCallback } from "react";
 import { NavBar } from "./NavBar";
 import { Footer } from "./Footer";
-import data from "./categories.json";
-import { BiRightArrow } from "react-icons/bi";
-import { BiLeftArrow } from "react-icons/bi";
+import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import { AiOutlinePlus } from "react-icons/ai";
 import { GrFormSubtract } from "react-icons/gr";
+import { useLocation } from "react-router-dom";
+import datajson from "./categories.json"
 
-import imgPrueba from "../assets/ProductosImgs/grafica3.png";
 
-interface Props {}
+interface PropsBtns  {
 
-const Botones = () => {
+  additem: () => () => void,
+  substractItem: () => () => void,
+  itemCount: number
+
+
+} 
+
+const Botones:FC<PropsBtns> = ({additem, substractItem, itemCount}) => {
+  
+
   return (
-    <div className="flex flex-col gap-5 mt-16">
+    <div className="flex flex-col gap-5 mt-16 md:w-1/2">
       <div className="flex justify-around ">
-        <button className="border border-seconday pr-2 pl-2 h-12 text-sm  flex items-center justify-between w-32 ">
+        <div className="border border-seconday pr-2 pl-2 h-12 text-sm gap-2 flex items-center justify-between min-w-[160px] ">
           {" "}
-          <GrFormSubtract /> <strong>1</strong> <AiOutlinePlus />{" "}
-        </button>
-        <button className="btnRed   pr-2 pl-2 text-sm  h-12 flex items-center justify-between  w-32">
+          <GrFormSubtract data-testid="restarBtn" /> <strong data-testid="itemsCount" >{itemCount}</strong> <AiOutlinePlus onClick={additem()} data-testid="sumarBtn" />{" "}
+        </div>
+        <div className="btnRed   pr-2 pl-2 text-sm  h-12 flex items-center justify-between  min-w-[160px] ">
           6GB <IoIosArrowDown />{" "}
-        </button>
+        </div>
       </div>
 
       <div className="flex justify-around">
-        <button className="bg-blackPrimary hover:text-seconday  pr-4 pl-4  h-12">
+        <button className="bg-blackPrimary hover:text-seconday   pr-4 pl-4  h-12">
           Añadir al carrito
         </button>
         <button className="pr-4 pl-4  h-12 bg-seconday ">Comprar ahora</button>
@@ -35,30 +44,64 @@ const Botones = () => {
   );
 };
 
-export const Product: FC<Props> = () => {
+
+
+interface dataLocation  {
+  link?: string;
+  descrip?: string;
+  price?: string;
+  descripcionProduct?: string
+}
+
+
+
+
+export const Product: FC<dataLocation> = () => {
+ 
+  const location = useLocation();
+  const data:dataLocation = location.state  || datajson.categories.cpu.imgs.img1 // Just for testing remove this-
+  const [itemsCount, setItemsCount] = useState<number>(0)
+ 
+  const additem = () => useCallback(()=> {
+    setItemsCount(prevCount => prevCount + 1)
+  }, [itemsCount])
+
+  const substractItem = () => useCallback(()=> {
+    setItemsCount(prevCount => prevCount - 1)
+  }, [itemsCount])
+    
+  
+ 
   return (
     <>
       <NavBar />
 
-      <section className="h-full md:flex b font-mono  ">
-        <div className=" h-80 md:h-2/3 bg-slate-600 flex items-center  justify-center md:w-1/2   ">
-          <BiLeftArrow className="text-seconday" />
-          <div className=" md:w-1/2 ml-6 mr-6 md:bg-white ">
-            <img src={imgPrueba} className=" md:w-96 " alt="" />
+      <section className=" md:flex  font-mono mb-12  ">
+        
+        <div className=" flex md:paddings md:pt-20 pt-2 ">
+          <div className=" flex justify-around items-center m-auto  md:w-[550px] md:h-[550px]  bg-white ">
+            <div className="w-14 h-14 bg-[rgba(0,0,0,0.25)] grid place-items-center rounded-[50%] cursor-pointer ">
+              <IoIosArrowBack className="text-seconday " />
+            </div> 
+            <img src={data.link} className="object-contain md:w-[400px]  " alt="" />
+            <div className="w-14 h-14 bg-[rgba(0,0,0,0.25)] grid place-items-center rounded-[50%] cursor-pointer" >
+                <IoIosArrowForward className="text-seconday" />
+
+            </div>
           </div>
-          <BiRightArrow className="text-seconday" />
+         
+         
         </div>
 
-        <div className="md:h-2/3   ">
-          <div className="pl-4 pr-4" >
-            <h2 className="text-2xl font-medium ">RX 6950 XT</h2>
-            <strong>$50</strong>
-            <p data-testid="paragraph">
-              La nueva tarjeta gráfica AMD para jugar a todo a 4K cuesta ahora
-              menos que nunca en PcComponentes
+        <div className="md:h-2/3 flex flex-col justify-around  ">
+          <div className="pl-4 pr-4 md:pt-20 pt-4 md:w-1/2" >
+            <h2 className="text-4xl font-medium ">{data.descrip}</h2>
+            <div className="text-lg mt-8 font-normal" > <h6>{data.price}</h6> </div>
+            <p className="text-lg md:mt-16 mt-8 "  data-testid="paragraph">
+              {data.descripcionProduct}
             </p>
           </div>
-          <Botones />
+          <Botones additem={additem} substractItem={substractItem} itemCount={itemsCount}  />
         </div>
       </section>
 
@@ -66,3 +109,22 @@ export const Product: FC<Props> = () => {
     </>
   );
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
