@@ -5,6 +5,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import { FaSearch } from "react-icons/fa";
 import { FaRegUserCircle } from "react-icons/fa";
 import { GlobalContext } from "./Wrapper";
+import {typeLogin} from "./Wrapper"
 
 interface Props {
   question?: boolean;
@@ -19,7 +20,7 @@ export const NavBar: FC<Props> = ({ question }) => {
   let stateLogin: boolean = logInState.logIn;
 
   useEffect(() => {
-    stateLogin = logInState.logIn;
+    stateLogin = logInState.logIn  ;
   }, [logInState]);
 
   return (
@@ -52,7 +53,7 @@ export const NavBar: FC<Props> = ({ question }) => {
         <li className="cursor-pointer">
           {" "}
           <div className="flex items-center gap-1 justify-center ">
-            <FiShoppingCart /> <strong>5</strong>
+            <FiShoppingCart /> <strong> {carrito.length} </strong>
           </div>
         </li>
         <li className="cursor-pointer ">
@@ -69,7 +70,7 @@ export const NavBar: FC<Props> = ({ question }) => {
       <div className="flex gap-3 items-center md:hidden">
         <GiHamburgerMenu />
         <div className="flex items-center gap-1 ">
-          <FiShoppingCart /> <strong>5</strong>
+          <FiShoppingCart /> <strong>{carrito.length}</strong>
         </div>
       </div>
     </nav>

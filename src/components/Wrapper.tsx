@@ -7,10 +7,10 @@ import { Product } from "./Product";
 
 
  export type ContextType = {
-  logInState?: typeLogin;
-  setLogin?: React.Dispatch<React.SetStateAction<typeLogin>>;
-  carrito?: ObjCarrito[];
-  setCarrito?: React.Dispatch<React.SetStateAction<ObjCarrito[]>>;
+  logInState: typeLogin;
+  setLogin: React.Dispatch<React.SetStateAction<typeLogin>>;
+  carrito: ObjCarrito[];
+  setCarrito: React.Dispatch<React.SetStateAction<ObjCarrito[]>>;
 }
 
 export type ObjCarrito = {
@@ -43,7 +43,7 @@ export type typeLogin = {
     email: string;
   };
   pass?: string;
-  logIn?: boolean;
+  logIn: boolean ;
 };
 
 const Wrapper: FC = () => {

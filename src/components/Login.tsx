@@ -19,8 +19,8 @@ export const Login = () => {
 
 
   const validateInfo = () => {
-    if (inputInfo?.email === "greyexample@gmail.com" && inputInfo.pass === "12345") {
-      setLogin({
+    if (inputInfo!.email === "greyexample@gmail.com" && inputInfo!.pass === "12345") {
+      setLogin!({
         user: {
           name: "Grey",
           email: "greyexample@gmail.com",
@@ -37,7 +37,7 @@ export const Login = () => {
     <>
       <NavBar question={false} />
 
-      <section className="flex h-[90%] justify-center items-center p-6">
+      <section className="flex h-[90%] justify-center items-center p-6 font-mono" >
         <div className="bg-white w-96 flex flex-col rounded-lg">
           <h5 className="text-center text-blackPrimary font-bold text-2xl m-3">
             Bienvenido Nuevamente!

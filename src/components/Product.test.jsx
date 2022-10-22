@@ -43,7 +43,7 @@ describe('Product Component', () => {
 
     it('should have two main buttons "añadir al carrito" and "comprar ahora" ', () => {
                       
-        screen.getByRole('button', {  name: /Añadir al carrito/i})
+        screen.getByRole('button', {  name: /enviar al carrito/i})
         screen.getByRole('button', {  name: /Comprar ahora/i})
                        
     });
@@ -67,16 +67,21 @@ describe('Product Component', () => {
         
         const user = userEvent.setup()
         
-         user.click(btn)
-         user.click(btnrestar)
+        await user.click(btn)
+        await user.click(btnrestar)
         
-        expect( (await screen.findByTestId("itemsCount")).textContent).toBe("0")
-        
-        screen.debug()
-        
+        const span = await  screen.findByTestId("itemsCount")
+
+        expect(span.textContent == 0 ).toBeTruthy()
+
+    
     });
 
     
+
+    
+
+
 
 
 });
