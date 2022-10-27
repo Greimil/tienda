@@ -28,4 +28,11 @@ html, body, #root {
         padding-right: 128px;
     }
 
+    .paddingsImg {
+        padding-left: 96px; 
+        padding-right: 96px;
+    }
+
+
+
 }

@@ -103,7 +103,10 @@ export const Product: FC<dataLocation> = () => {
       <NavBar />
 
       <section className=" md:flex justify-center font-mono mb-12  ">
-        <div className=" flex md:paddings md:pt-20 pt-2 ">
+        
+        <div id="wrapper" className="flex flex-col justify-center md:flex-row md:pt-20 pt-2 md:w-4/5    "  >
+
+        <div className=" flex  ">
           <div className=" flex justify-around items-center m-auto  md:w-[550px] md:h-[550px]  bg-white ">
             <div className="w-14 h-14 bg-[rgba(0,0,0,0.25)] grid place-items-center rounded-[50%] cursor-pointer ">
               <IoIosArrowBack className="text-seconday " />
@@ -119,8 +122,8 @@ export const Product: FC<dataLocation> = () => {
           </div>
         </div>
 
-        <div className="md:h-2/3 flex flex-col justify-around  ">
-          <div className="pl-4 pr-4 md:pt-20 pt-4 md:w-1/2">
+        <div className=" flex flex-col p-12 justify-around md:w-[550px] ">
+          <div className="">
             <h2 className="text-4xl font-medium ">{data.descrip}</h2>
             <div className="text-lg mt-8 font-normal">
               {" "}
@@ -138,6 +141,10 @@ export const Product: FC<dataLocation> = () => {
             data={dataApasar}
           />
         </div>
+
+        </div>
+
+
       </section>
 
       <Footer />

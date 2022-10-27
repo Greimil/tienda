@@ -20,8 +20,8 @@ export  const Botones: FC<PropsBtns> = ({
     data,
   }) => {
     return (
-      <div className="flex flex-col gap-5 mt-16 md:w-1/2">
-        <div className="flex justify-around ">
+      <div className="flex flex-col gap-5 mt-16 ">
+        <div className="flex justify-center gap-4 ">
           <div className="border border-seconday pr-2 pl-2 h-12 text-sm gap-2 flex items-center justify-between min-w-[160px] ">
             {" "}
             <span onClick={subtractItem()} data-testid="restarBtn">
@@ -37,7 +37,7 @@ export  const Botones: FC<PropsBtns> = ({
           </div>
         </div>
   
-        <div className="flex justify-around">
+        <div className="flex justify-center gap-4">
           <button
             className="bg-blackPrimary hover:text-seconday   pr-4 pl-4  h-12"
             onClick={(e) => addItemCarrito(data, itemCount)}
