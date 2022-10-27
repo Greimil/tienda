@@ -19,6 +19,7 @@ export type ObjCarrito = {
   precio: number;
   img: string;
   descripción: string;
+  cantidad: number
 };
 
 

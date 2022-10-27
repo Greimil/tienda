@@ -14,9 +14,13 @@ interface Props {
 export const NavBar: FC<Props> = ({ question }) => {
   const location = useLocation();
   const { carrito, setCarrito, setLogin, logInState } = useContext(GlobalContext);
+  let totalItems: number = 0 
+  carrito.forEach((obj)=> {
+    totalItems += obj.cantidad
+  })
   
-  
-  
+
+
   let stateLogin: boolean = logInState.logIn;
 
   useEffect(() => {
@@ -53,7 +57,7 @@ export const NavBar: FC<Props> = ({ question }) => {
         <li className="cursor-pointer">
           {" "}
           <div className="flex items-center gap-1 justify-center ">
-            <FiShoppingCart /> <strong> {carrito.length} </strong>
+            <FiShoppingCart /> <span data-testid="carritoCount" id="carritoCount" >{totalItems}</span>
           </div>
         </li>
         <li className="cursor-pointer ">
@@ -70,7 +74,7 @@ export const NavBar: FC<Props> = ({ question }) => {
       <div className="flex gap-3 items-center md:hidden">
         <GiHamburgerMenu />
         <div className="flex items-center gap-1 ">
-          <FiShoppingCart /> <strong>{carrito.length}</strong>
+          <FiShoppingCart /> <strong>{totalItems}</strong>
         </div>
       </div>
     </nav>

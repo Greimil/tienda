@@ -13,50 +13,55 @@ import { nanoid } from "nanoid";
 
 
 
-
-
-
 export interface dataCategories {
   h2: string;
   p: string;
   imgs: {
     img1: {
+      id: number;
       link: string;
       descrip: string;
       price: string;
       
     };
     img2: {
+      id: number;
       link: string;
       descrip: string;
       price: string;
     };
     img3: {
+      id: number;
       link: string;
       descrip: string;
       price: string;
     };
     img4: {
+      id: number;
       link: string;
       descrip: string;
       price: string;
     };
     img5: {
+      id: number;
       link: string;
       descrip: string;
       price: string;
     };
     img6: {
+      id: number;
       link: string;
       descrip: string;
       price: string;
     };
     img7: {
+      id: number;
       link: string;
       descrip: string;
       price: string;
     };
     img8: {
+      id: number;
       link: string;
       descrip: string;
       price: string;

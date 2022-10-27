@@ -12,6 +12,7 @@ interface ImgsInterface {
       descrip: string;
       price: string;
       descripcionProduct?: string
+      
     };
     img2: {
       id: number,
@@ -19,6 +20,7 @@ interface ImgsInterface {
       descrip: string;
       price: string;
       descripcionProduct?: string
+      
     };
     img3: {
       id: number,
@@ -26,6 +28,7 @@ interface ImgsInterface {
       descrip: string;
       price: string;
       descripcionProduct?: string
+      
     };
     img4: {
       id: number,
@@ -33,6 +36,7 @@ interface ImgsInterface {
       descrip: string;
       price: string;
       descripcionProduct?: string
+      
     };
     img5: {
       id: number,
@@ -40,6 +44,7 @@ interface ImgsInterface {
       descrip: string;
       price: string;
       descripcionProduct?: string
+      
     };
     img6: {
       id: number,
@@ -47,6 +52,7 @@ interface ImgsInterface {
       descrip: string;
       price: string;
       descripcionProduct?: string
+      
     };
     img7: {
       id: number,
@@ -54,6 +60,7 @@ interface ImgsInterface {
       descrip: string;
       price: string;
       descripcionProduct?: string
+      
     };
     img8: {
       id: number,
@@ -61,13 +68,14 @@ interface ImgsInterface {
       descrip: string;
       price: string;
       descripcionProduct?: string
+      
     };
   };
 }
 
 export const GridShop: FC<ImgsInterface> = ({ Imgs }) => {
   const cells = Object.entries(Imgs);
-
+  console.log(cells)
   
 
   return (

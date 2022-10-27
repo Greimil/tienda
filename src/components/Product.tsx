@@ -14,6 +14,7 @@ export interface dataApasar {
   descrip: string;
   price: number;
   descripcionProduct: string;
+  cantidad: number
 }
 
 
@@ -58,6 +59,7 @@ export const Product: FC<dataLocation> = () => {
     price: Number([...data.price].slice(1).join("")),
     descrip: data.link.toString(),
     descripcionProduct: data.descrip.toString(),
+    cantidad: itemsCount
   }; 
 
   const addItemCarrito = (data: dataApasar, itemCount: number) => {
@@ -67,48 +69,32 @@ export const Product: FC<dataLocation> = () => {
       precio: data.price,
       img: data.link.toString(),
       descripción: data.descrip.toString(),
+      cantidad: itemsCount
     };
 
-    let i = 0;
-
-
-    const reduceArray = (arr: Array<ObjCarrito>, id: number  ): Array<ObjCarrito>  => {
-
-      let position  = arr.findIndex((obj) => obj.id == id  ) 
+    if(carrito.findIndex((obj) => obj.id === data.id ) === -1) {
+      setCarrito((arr) => [...arr,  { ...obj } ]);
       
-      arr.splice(position, 1)
-
-      return arr
-
-    }
-
-
-   
-    
-
-    if (itemCount < carrito.length ) {
-      
-      let obj = reduceArray(carrito, data.id )
-
-      console.log(obj);
-
-      setCarrito(obj)
-      
-
     } else {
 
-      while (i < itemCount) {
-        setCarrito((arr) => [...arr,  { ...obj } ]);
-  
-        i += 1;
-      }
+      setCarrito((arr) => { 
+        
+        return arr.map((obj)=> {
+          if (obj.id === data.id) {
+            return {...obj, cantidad: itemCount }
+          }
+
+          return obj
+        })
+      
+      
+      
+      })
+
 
     }
-
-
-    // console.log(carrito)
-
-
+    
+  
 
   };
 
@@ -116,7 +102,7 @@ export const Product: FC<dataLocation> = () => {
     <>
       <NavBar />
 
-      <section className=" md:flex  font-mono mb-12  ">
+      <section className=" md:flex justify-center font-mono mb-12  ">
         <div className=" flex md:paddings md:pt-20 pt-2 ">
           <div className=" flex justify-around items-center m-auto  md:w-[550px] md:h-[550px]  bg-white ">
             <div className="w-14 h-14 bg-[rgba(0,0,0,0.25)] grid place-items-center rounded-[50%] cursor-pointer ">
