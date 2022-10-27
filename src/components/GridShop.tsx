@@ -7,48 +7,56 @@ import { Link } from "react-router-dom";
 interface ImgsInterface {
   Imgs: {
     img1: {
+      id: number,
       link: string;
       descrip: string;
       price: string;
       descripcionProduct?: string
     };
     img2: {
+      id: number,
       link: string;
       descrip: string;
       price: string;
       descripcionProduct?: string
     };
     img3: {
+      id: number,
       link: string;
       descrip: string;
       price: string;
       descripcionProduct?: string
     };
     img4: {
+      id: number,
       link: string;
       descrip: string;
       price: string;
       descripcionProduct?: string
     };
     img5: {
+      id: number,
       link: string;
       descrip: string;
       price: string;
       descripcionProduct?: string
     };
     img6: {
+      id: number,
       link: string;
       descrip: string;
       price: string;
       descripcionProduct?: string
     };
     img7: {
+      id: number,
       link: string;
       descrip: string;
       price: string;
       descripcionProduct?: string
     };
     img8: {
+      id: number,
       link: string;
       descrip: string;
       price: string;
@@ -59,6 +67,7 @@ interface ImgsInterface {
 
 export const GridShop: FC<ImgsInterface> = ({ Imgs }) => {
   const cells = Object.entries(Imgs);
+
   
 
   return (

@@ -5,6 +5,7 @@
       "p": "En esta sección podrás encontrar todo lo relacionado al apasionante mundo de las gráficas, desde las mas económicas hasta las mas top.",
       "imgs": {
         "img1": {
+          "id": 1 ,
           "link": "./src/assets/ProductosImgs/grafica1.png",
           "descrip": "GEFORCE GTX 980 4GB",
           "price": "$99", 
@@ -12,6 +13,7 @@
         },
 
         "img2": {
+          "id": 2 ,
           "link": "./src/assets/ProductosImgs/grafica2.png",
           "descrip": "GEFORCE GTX 1070 6GB",
           "price": "$180",
@@ -19,6 +21,7 @@
           
         },
         "img3": {
+          "id": 3 ,
           "link": "./src/assets/ProductosImgs/grafica3.png",
           "descrip": "GEFORCE GTX 1070 6GB",
           "price": "$180",
@@ -26,6 +29,7 @@
           
         },
         "img4": {
+          "id": 4 ,
           "link": "./src/assets/ProductosImgs/grafica4.png",
           "descrip": "GEFORCE GTX 660 2GB",
           "price": "$70",
@@ -33,6 +37,7 @@
 
         },
         "img5": {
+          "id": 5 ,
           "link": "./src/assets/ProductosImgs/grafica5.png",
           "descrip": "RX 6500 XT 8GB",
           "price": "$300",
@@ -41,6 +46,7 @@
         },
 
         "img6": {
+          "id": 6 ,
           "link": "./src/assets/ProductosImgs/grafica6.png",
           "descrip": "RX 5600 XT 6GB",
           "price": "$220",
@@ -48,6 +54,7 @@
           
         },
         "img7": {
+          "id": 7 ,
           "link": "./src/assets/ProductosImgs/grafica7.png",
           "descrip": "RX 470 4GB",
           "price": "$80",
@@ -55,6 +62,7 @@
 
         },
         "img8": {
+          "id": 8 ,
           "link": "./src/assets/ProductosImgs/grafica8.png",
           "descrip": "RX 6950 XT 4GB",
           "price": "$50",
@@ -68,6 +76,7 @@
       "p": "Esta sección podrás encontrar los procesadores de ultima generación, tanto como los poderosos I9000K, hasta los eficientes Ryzen 5700X.",
       "imgs": {
         "img1": {
+          "id": 9 ,
           "link": "./src/assets/ProductosImgs/procesador1.png",
           "descrip": "AMD Ryzen 9 3950x  4,7 Ghz",
           "price": "$180", 
@@ -75,24 +84,28 @@
         },
 
         "img2": {
+          "id": 10 ,
           "link": "./src/assets/ProductosImgs/procesador2.png",
           "descrip": "AMD Ryzen 9 3900XT 5 Ghz",
           "price": "$210",
           "descripcionProduct": "Sácale el máximo provecho a tu tarjeta grafica con este monstruo de procesador"
         },
         "img3": {
+          "id": 11 ,
           "link": "./src/assets/ProductosImgs/procesador3.png",
           "descrip": "Intel Core I9-9900K 5 Ghz",
           "price": "$220",
           "descripcionProduct": "Sácale el máximo provecho a tu tarjeta grafica con este monstruo de procesador"
         },
         "img4": {
+          "id":12  ,
           "link": "./src/assets/ProductosImgs/procesador4.png",
           "descrip": "Intel Core i7-9700K 4.9 Ghz",
           "price": "$249",
           "descripcionProduct": "Sácale el máximo provecho a tu tarjeta grafica con este monstruo de procesador"
         },
         "img5": {
+          "id":13  ,
           "link": "./src/assets/ProductosImgs/procesador5.png",
           "descrip": "AMD Ryzen 7 3700X 4.4 Ghz",
           "price": "$300",
@@ -100,18 +113,21 @@
         },
 
         "img6": {
+          "id":14 ,
           "link": "./src/assets/ProductosImgs/procesador6.png",
           "descrip": "Intel Core i5-9600k 4.6 Ghz",
           "price": "$370",
           "descripcionProduct": "Sácale el máximo provecho a tu tarjeta grafica con este monstruo de procesador"
         },
         "img7": {
+          "id": 15 ,
           "link": "./src/assets/ProductosImgs/procesador7.png",
           "descrip": "AMD 3200G Ryzen 3 4.1 Ghz",
           "price": "$400",
           "descripcionProduct": "Sácale el máximo provecho a tu tarjeta grafica con este monstruo de procesador"
         },
         "img8": {
+          "id": 16  ,
           "link": "./src/assets/ProductosImgs/procesador8.png",
           "descrip": "Intel Core i7 10700K 5.1 Ghz",
           "price": "$420",
@@ -124,6 +140,7 @@
       "p": "Las mas modernas y rápidas laptops del mercado, para que puedas disfrutar de tus video juegos favoritos a altas tasas de refresco y con la mayor fluidez posible",
       "imgs": {
         "img1": {
+          "id": 17  ,
           "link": "./src/assets/ProductosImgs/lapto1.png",
           "descrip": "Lenovo Legion 5",
           "price": "$680",
@@ -131,24 +148,28 @@
         },
 
         "img2": {
+          "id":  18 ,
           "link": "./src/assets/ProductosImgs/lapto2.png",
           "descrip": "Lenovo IdeaPad Gaming",
           "price": "$710",
           "descripcionProduct": "Disfruta de la libertad de movilidad que te da esta laptop sin sacrificar la potencia"
         },
         "img3": {
+          "id": 19  ,
           "link": "./src/assets/ProductosImgs/lapto3.png",
           "descrip": "Acer Predator Helios ",
           "price": "$720",
           "descripcionProduct": "Disfruta de la libertad de movilidad que te da esta laptop sin sacrificar la potencia"
         },
         "img4": {
+          "id": 20 ,
           "link": "./src/assets/ProductosImgs/lapto4.png",
           "descrip": "Lenovo Legion 5 Laptop",
           "price": "$899",
           "descripcionProduct": "Disfruta de la libertad de movilidad que te da esta laptop sin sacrificar la potencia"
         },
         "img5": {
+          "id": 21 ,
           "link": "./src/assets/ProductosImgs/lapto5.png",
           "descrip": "MSI Crosshair 15",
           "price": "$900",
@@ -156,18 +177,21 @@
         },
 
         "img6": {
+          "id": 22 ,
           "link": "./src/assets/ProductosImgs/lapto6.png",
           "descrip": "MSI GF65 Laptop",
           "price": "$999",
           "descripcionProduct": "Disfruta de la libertad de movilidad que te da esta laptop sin sacrificar la potencia"
         },
         "img7": {
+          "id": 23 ,
           "link": "./src/assets/ProductosImgs/lapto7.png",
           "descrip": "Lenovo Legion 7 Laptop Gaming",
           "price": "$1200",
           "descripcionProduct": "Disfruta de la libertad de movilidad que te da esta laptop sin sacrificar la potencia"
         },
         "img8": {
+          "id": 24 ,
           "link": "./src/assets/ProductosImgs/lapto8.png",
           "descrip": "Acer Nitro 5 Laptop Gaming",
           "price": "$1420",
@@ -181,6 +205,7 @@
       "p": "Las Computadoras de escritorio son de lo mas top en cuanto a potencia se refiere, con nuestras computadoras de escritorio podrás aprovechar el máximo rendimiento de los componentes para disfrutar de la mejor experiencia de juego.",
       "imgs": {
         "img1": {
+          "id": 25 ,
           "link": "./src/assets/ProductosImgs/pc1.png",
           "descrip": "Sedatech Pro Gaming",
           "price": "$1800",
@@ -188,24 +213,28 @@
         },
 
         "img2": {
+          "id": 26 ,
           "link": "./src/assets/ProductosImgs/pc2.png",
           "descrip": "Corsair One i300",
           "price": "$2000",
           "descripcionProduct": "Si lo tuyo son los ordenadores de escritorio este potente equipo es para ti, con la mejor relación potencia-precio este equipo te permite jugar a mas de 60FPS los títulos mas actuales."
         },
         "img3": {
+          "id": 27 ,
           "link": "./src/assets/ProductosImgs/pc3.png",
           "descrip": "Sedatech Gaming Expert",
           "price": "$2100",
           "descripcionProduct": "Si lo tuyo son los ordenadores de escritorio este potente equipo es para ti, con la mejor relación potencia-precio este equipo te permite jugar a mas de 60FPS los títulos mas actuales."
         },
         "img4": {
+          "id": 28 ,
           "link": "./src/assets/ProductosImgs/pc4.png",
           "descrip": "PCSpecialist Pro",
           "price": "$2500",
           "descripcionProduct": "Si lo tuyo son los ordenadores de escritorio este potente equipo es para ti, con la mejor relación potencia-precio este equipo te permite jugar a mas de 60FPS los títulos mas actuales."
         },
         "img5": {
+          "id": 29 ,
           "link": "./src/assets/ProductosImgs/pc5.png",
           "descrip": "Newskill Manticore Elite",
           "price": "$2500",
@@ -213,18 +242,21 @@
         },
 
         "img6": {
+          "id": 30 ,
           "link": "./src/assets/ProductosImgs/pc6.png",
           "descrip": "Megaport 401-ES",
           "price": "$2900",
           "descripcionProduct": "Si lo tuyo son los ordenadores de escritorio este potente equipo es para ti, con la mejor relación potencia-precio este equipo te permite jugar a mas de 60FPS los títulos mas actuales."
         },
         "img7": {
+          "id": 31 ,
           "link": "./src/assets/ProductosImgs/pc7.png",
           "descrip": "HP Pavilion Gaming TG01-1049ns",
           "price": "$3000",
           "descripcionProduct": "Si lo tuyo son los ordenadores de escritorio este potente equipo es para ti, con la mejor relación potencia-precio este equipo te permite jugar a mas de 60FPS los títulos mas actuales."
         },
         "img8": {
+          "id":  32 ,
           "link": "./src/assets/ProductosImgs/pc8.png",
           "descrip": "Alienware",
           "price": "$3500",

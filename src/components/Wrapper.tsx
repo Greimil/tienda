@@ -14,6 +14,7 @@ import { Product } from "./Product";
 }
 
 export type ObjCarrito = {
+  id:  number;
   titulo: string;
   precio: number;
   img: string;

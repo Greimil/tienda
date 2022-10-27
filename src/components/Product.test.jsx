@@ -71,8 +71,11 @@ describe('Product Component', () => {
         await user.click(btnrestar)
         
         const span = await  screen.findByTestId("itemsCount")
+       
+        console.log(span.textContent, "El texto del span")
+        
+        expect(span.textContent == 1 ).toBeTruthy()
 
-        expect(span.textContent == 0 ).toBeTruthy()
 
     
     });

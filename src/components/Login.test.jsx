@@ -31,7 +31,7 @@ describe("Login Component", () => {
             <BrowserRouter>
             <Login />
             </BrowserRouter>
-        <GlobalContext.Provider />
+        <GlobalContext.Provider /> 
       </>
     );
   });
