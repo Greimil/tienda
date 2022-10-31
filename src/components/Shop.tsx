@@ -77,7 +77,7 @@ export interface dataCategories {
   };
 }
 
-export const Shop: FC = () => {
+const Shop: FC = () => {
   const [btns, setbtns] = useState<boolean[]>([true, false, false, false]);
   const botones: any = [
     { titulo: "GPU" },
@@ -174,3 +174,5 @@ export const Shop: FC = () => {
     </>
   );
 };
+
+export default Shop

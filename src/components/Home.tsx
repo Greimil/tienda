@@ -8,7 +8,7 @@ import ryzen from "../assets/ryzen.png"
 import graficaBg from "../assets/graficaBG.png"
 import { Link } from "react-router-dom";
 
-export const Home: FC = () => {
+const Home: FC = () => {
   return (
     <>
 
@@ -47,3 +47,5 @@ export const Home: FC = () => {
     </>
   );
 };
+
+export default Home

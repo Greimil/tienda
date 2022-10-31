@@ -1,6 +1,6 @@
 import { cleanup, render , screen} from '@testing-library/react';
 import { afterEach, describe, it, beforeEach, expect } from 'vitest';
-import { Home } from './Home';
+import  Home  from './Home';
 
 import { BrowserRouter } from 'react-router-dom';
 
@@ -49,8 +49,6 @@ describe('home Component', () => {
 
 
     
-
-
 
 
 

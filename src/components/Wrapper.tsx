@@ -1,27 +1,34 @@
-import React, { FC, useState, createContext } from "react";
+import React, { FC, useState, createContext , lazy, Suspense} from "react";
 import { HashRouter, BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from "./Home";
-import { Shop } from "./Shop";
-import { Login } from "./Login";
-import { Product } from "./Product";
-import {Cart} from "./cart"
 
 
- export type ContextType = {
+
+import Home from "./Home";
+import Loading from "./Loading";
+
+// const Loading = lazy(()=> import("./Loading"))
+const Shop = lazy(()=> import("./Shop"))
+const Login = lazy(()=> import("./Login"))
+const Product = lazy(()=> import("./Product"))
+const Cart = lazy(()=> import("./cart"))
+
+
+export type ContextType = {
   logInState: typeLogin;
   setLogin: React.Dispatch<React.SetStateAction<typeLogin>>;
   carrito: ObjCarrito[];
   setCarrito: React.Dispatch<React.SetStateAction<ObjCarrito[]>>;
 }
 
-export type ObjCarrito = {
+export interface ObjCarrito  {
   id:  number;
   titulo: string;
   precio: number;
   img: string;
   descripción: string;
-  cantidad: number, 
-  capacidad: string
+  cantidad: number; 
+  capacidad: string;
+  subtotal: number;
 };
 
 
@@ -47,7 +54,7 @@ export type typeLogin = {
     email: string;
   };
   pass?: string;
-  logIn: boolean ;
+  logIn: boolean;
 };
 
 const Wrapper: FC = () => {
@@ -62,14 +69,6 @@ const Wrapper: FC = () => {
   const [carrito, setCarrito] = useState<Array<ObjCarrito>>([]);
 
 
-  let obj = {
-    logInState: logIn,
-    setLogin,
-    carrito,
-    setCarrito,
-  }
-
-
   return (
     <GlobalContext.Provider
       value={{
@@ -80,6 +79,7 @@ const Wrapper: FC = () => {
       }}
     >
       <BrowserRouter>
+        <Suspense fallback={<Loading/>}  >
         <Routes> 
           <Route path="/" element={<Home />} />
           <Route path="/tienda" element={<Shop />} />
@@ -87,6 +87,7 @@ const Wrapper: FC = () => {
           <Route path="/product:id" element={<Product />}/>
           <Route path="/carrito" element={<Cart/>}/>
         </Routes>
+        </Suspense>
       </BrowserRouter>
     </GlobalContext.Provider>
   );

@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event"
 import { describe, it, afterEach, beforeEach, expect } from "vitest";
 import { BrowserRouter } from "react-router-dom";
 
-import { Product } from './Product';
+import Product  from './Product';
 
 
 describe('Product Component', () => {

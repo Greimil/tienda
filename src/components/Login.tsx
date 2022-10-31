@@ -3,7 +3,7 @@ import { NavBar } from "./NavBar";
 import { useNavigate } from "react-router-dom";
 import { GlobalContext } from "./Wrapper";
 
-export const Login = () => {
+const Login = () => {
   type inputInterface = {
     email?: string;
     pass?: string;
@@ -92,4 +92,6 @@ export const Login = () => {
     </>
   );
 };
-45;
+
+
+export default Login

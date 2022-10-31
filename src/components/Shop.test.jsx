@@ -1,7 +1,7 @@
 import { screen, render, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event"
 import { describe, it, afterEach, beforeEach, expect } from "vitest";
-import { Shop } from "./Shop";
+import Shop  from "./Shop";
 
 import { BrowserRouter } from "react-router-dom";
 

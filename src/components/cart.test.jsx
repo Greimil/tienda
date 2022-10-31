@@ -1,6 +1,6 @@
 import { screen, render, cleanup } from "@testing-library/react";
 import { describe, it, afterEach, beforeEach, expect } from "vitest";
-import { Cart } from "./cart";
+import  Cart  from "./cart";
 import { BrowserRouter } from "react-router-dom";
 import { createContext } from "react";
 
@@ -55,7 +55,7 @@ describe("Cart component", () => {
 
   it('It should have a link with the the text "¿Aun no terminas de comprar?, sigue comprando" ', () => {
     screen.getByRole("link", {
-      name: /¿aún no terminas de comprar\?, sigue comprando\./i,
+      name: /¿Aún no terminas de comprar\? ¡sigue comprando!/i,
     });
   });
 

@@ -20,6 +20,7 @@ export interface dataApasar {
   descripcionProduct: string;
   cantidad: number;
   capacidad: Array<string> 
+  subtotal: number
 }
 
 
@@ -32,7 +33,7 @@ interface dataLocation {
   capacidad: Array<string> 
 }
 
-export const Product: FC<dataLocation> = () => {
+const Product: FC<dataLocation> = () => {
   const navigate = useNavigate()
   const location = useLocation();
   const data: dataLocation =
@@ -47,11 +48,12 @@ export const Product: FC<dataLocation> = () => {
       setItemsCount((prevCount) => prevCount + 1);
     }, [itemsCount]);
 
-  const subtractItem = () =>
+    const subtractItem = () =>
     useCallback(() => {
       setItemsCount((prevCount) => (prevCount > 0 ? prevCount - 1 : prevCount));
     }, [itemsCount]);
 
+  
   const dataApasar: dataApasar = {
     id: data.id,
     link: data.descrip.toString(),
@@ -60,12 +62,11 @@ export const Product: FC<dataLocation> = () => {
     descripcionProduct: data.descrip.toString(),
     cantidad: itemsCount,
     capacidad: data.capacidad,
+    subtotal: itemsCount * Number([...data.price].slice(1).join(""))
   };
 
   const addItemCarrito = (data: dataApasar, itemCount: number) => {
-    interface HTMLElement {
-      value: any
-    }
+   
 
     let select = (document.getElementById("selection") as HTMLInputElement).value;
     
@@ -77,7 +78,8 @@ export const Product: FC<dataLocation> = () => {
       img: data.link.toString(),
       descripción: data.descrip.toString(),
       cantidad: itemsCount,
-      capacidad: select
+      capacidad: select, 
+      subtotal: itemsCount * data.price
     };
 
     if (carrito.findIndex((obj) => obj.id === data.id) === -1) {
@@ -155,3 +157,5 @@ export const Product: FC<dataLocation> = () => {
     </>
   );
 };
+
+export default  Product

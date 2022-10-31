@@ -57,6 +57,6 @@ describe("NavBar Component", () => {
   });
 
   it("Should have 5 links ", () => {
-    expect(screen.getAllByRole("link").length).toBe(5);
+    expect(screen.getAllByRole("link").length).toBe(7);
   });
 });

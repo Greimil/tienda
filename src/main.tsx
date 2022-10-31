@@ -4,7 +4,7 @@ import Wrapper from './components/Wrapper'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Wrapper  />
-  </React.StrictMode>
+  // </React.StrictMode>
 )

@@ -1,7 +1,6 @@
 import { FC , useRef} from 'react';
 import { nanoid } from 'nanoid';
 import {dataApasar} from "./Product"
-import { IoIosArrowDown } from "react-icons/io";
 import { AiOutlinePlus } from "react-icons/ai";
 import { GrFormSubtract } from "react-icons/gr";
 import { Link } from 'react-router-dom';
@@ -17,7 +16,7 @@ interface PropsBtns {
   
 export  const Botones: FC<PropsBtns> = ({
     additem,
-    subtractItem: subtractItem,
+    subtractItem,
     itemCount,
     addItemCarrito,
     data,

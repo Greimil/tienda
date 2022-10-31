@@ -1,6 +1,6 @@
 import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, describe, it, beforeEach, expect } from "vitest";
-import { Login } from "./Login";
+import  Login from "./Login";
 import { GlobalContext } from "./Wrapper";
 import { BrowserRouter } from "react-router-dom";
 

@@ -40,7 +40,7 @@ export const Acordeon: FC = () => {
   
     return (
     
-    <div className='md:max-w-xl mt-7' >
+    <div className='md:max-w-xl mt-7 ' >
     <h1 className='font-semibold text-2xl border-black border-b-2  p-3'>Información de tu orden</h1>
     <Accordion allowMultipleExpanded={false}>
     {items.map((item) => (
