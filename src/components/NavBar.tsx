@@ -56,9 +56,11 @@ export const NavBar: FC<Props> = ({ question }) => {
       <ul role="ul" className=" hidden md:flex gap-3">
         <li className="cursor-pointer">
           {" "}
+          <Link to="/carrito" >
           <div className="flex items-center gap-1 justify-center ">
             <FiShoppingCart /> <span data-testid="carritoCount" id="carritoCount" >{totalItems}</span>
           </div>
+          </Link>
         </li>
         <li className="cursor-pointer ">
           {location.pathname === "/login" ? (
@@ -73,9 +75,11 @@ export const NavBar: FC<Props> = ({ question }) => {
 
       <div className="flex gap-3 items-center md:hidden">
         <GiHamburgerMenu />
+        <Link to="/carrito">
         <div className="flex items-center gap-1 ">
           <FiShoppingCart /> <strong>{totalItems}</strong>
         </div>
+        </Link>
       </div>
     </nav>
   );

@@ -3,8 +3,9 @@ import React,{FC} from "react";
 export const Footer: FC = () => {
   return (
     <footer className="" >
-      <div className=" flex justify-center  flex-wrap items-center md:p-6" >
-        <div className="flex flex-col gap-2 justify-center items-center md:items-start p-3 max-w-lg" >
+      <div className=" flex  md:paddings  justify-between flex-wrap items-center " >
+        
+        <div className="flex md:w-[30%] flex-col gap-2 justify-center items-center md:items-start p-3 max-w-lg" >
           <h3 className="text-2xl md:text-4xl md:text-left text-center" >Regístrate en nuestro Newsletter</h3>
           <p className="text-sm md:text-xl" >
             Se el primero en conocer nuestras ofertas especiales, lanzamientos
@@ -18,7 +19,7 @@ export const Footer: FC = () => {
 
         </div>
 
-        <div data-testid="sitemap" className="flex  justify-center  p-4  " >
+        <div data-testid="sitemap" className="flex  md:w-[70%] justify-around  p-4  " >
           <div className="p-2 md:text-lg">
             <h5 className="font-bold" >Tienda</h5>
             <ul className="text-textSecondary text-[14px] md:text-lg cursor-pointer  " >

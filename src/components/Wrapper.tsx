@@ -4,6 +4,7 @@ import { Home } from "./Home";
 import { Shop } from "./Shop";
 import { Login } from "./Login";
 import { Product } from "./Product";
+import {Cart} from "./cart"
 
 
  export type ContextType = {
@@ -19,7 +20,8 @@ export type ObjCarrito = {
   precio: number;
   img: string;
   descripción: string;
-  cantidad: number
+  cantidad: number, 
+  capacidad: string
 };
 
 
@@ -83,6 +85,7 @@ const Wrapper: FC = () => {
           <Route path="/tienda" element={<Shop />} />
           <Route path="/login" element={<Login />} />
           <Route path="/product:id" element={<Product />}/>
+          <Route path="/carrito" element={<Cart/>}/>
         </Routes>
       </BrowserRouter>
     </GlobalContext.Provider>

@@ -22,6 +22,7 @@ export interface dataCategories {
       link: string;
       descrip: string;
       price: string;
+      capacidad: Array<string>
       
     };
     img2: {
@@ -29,42 +30,49 @@ export interface dataCategories {
       link: string;
       descrip: string;
       price: string;
+      capacidad: Array<string>
     };
     img3: {
       id: number;
       link: string;
       descrip: string;
       price: string;
+      capacidad: Array<string>
     };
     img4: {
       id: number;
       link: string;
       descrip: string;
       price: string;
+      capacidad: Array<string>
     };
     img5: {
       id: number;
       link: string;
       descrip: string;
       price: string;
+      capacidad: Array<string>
     };
     img6: {
       id: number;
       link: string;
       descrip: string;
       price: string;
+      capacidad: Array<string>
     };
     img7: {
       id: number;
       link: string;
       descrip: string;
       price: string;
+      capacidad: Array<string>
     };
     img8: {
       id: number;
       link: string;
       descrip: string;
       price: string;
+      capacidad: Array<string>
     };
   };
 }

@@ -11,7 +11,8 @@ interface ImgsInterface {
       link: string;
       descrip: string;
       price: string;
-      descripcionProduct?: string
+      descripcionProduct?: string,
+      capacidad: Array<string>
       
     };
     img2: {
@@ -19,7 +20,8 @@ interface ImgsInterface {
       link: string;
       descrip: string;
       price: string;
-      descripcionProduct?: string
+      descripcionProduct?: string,
+      capacidad: Array<string>
       
     };
     img3: {
@@ -27,7 +29,8 @@ interface ImgsInterface {
       link: string;
       descrip: string;
       price: string;
-      descripcionProduct?: string
+      descripcionProduct?: string,
+      capacidad: Array<string>
       
     };
     img4: {
@@ -35,7 +38,8 @@ interface ImgsInterface {
       link: string;
       descrip: string;
       price: string;
-      descripcionProduct?: string
+      descripcionProduct?: string,
+      capacidad: Array<string>
       
     };
     img5: {
@@ -43,7 +47,8 @@ interface ImgsInterface {
       link: string;
       descrip: string;
       price: string;
-      descripcionProduct?: string
+      descripcionProduct?: string,
+      capacidad: Array<string>
       
     };
     img6: {
@@ -51,7 +56,8 @@ interface ImgsInterface {
       link: string;
       descrip: string;
       price: string;
-      descripcionProduct?: string
+      descripcionProduct?: string,
+      capacidad: Array<string>
       
     };
     img7: {
@@ -59,7 +65,8 @@ interface ImgsInterface {
       link: string;
       descrip: string;
       price: string;
-      descripcionProduct?: string
+      descripcionProduct?: string,
+      capacidad: Array<string>
       
     };
     img8: {
@@ -67,7 +74,8 @@ interface ImgsInterface {
       link: string;
       descrip: string;
       price: string;
-      descripcionProduct?: string
+      descripcionProduct?: string,
+      capacidad: Array<string>
       
     };
   };
@@ -75,7 +83,7 @@ interface ImgsInterface {
 
 export const GridShop: FC<ImgsInterface> = ({ Imgs }) => {
   const cells = Object.entries(Imgs);
-  console.log(cells)
+  
   
 
   return (
@@ -110,3 +118,4 @@ export const GridShop: FC<ImgsInterface> = ({ Imgs }) => {
 GridShop.defaultProps = {
   Imgs: data.categories.cpu,
 };
+  
