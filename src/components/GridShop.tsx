@@ -92,10 +92,10 @@ export const GridShop: FC<ImgsInterface> = ({ Imgs }) => {
         return (
           <Link to={`/product:${current[1].descrip.split(" ").join("-").toLowerCase()}`} state={current[1]} key={nanoid()} role="cell"  >
             <div
-              className="  h-[332px] cursor-pointer  "
+              className="  h-[332px] cursor-pointer   "
             >
               <img
-                className="m-auto  w-60 h-60 object-cover"
+                className="m-auto  w-60 h-60 object-contain"
                 src={current[1].link}
                 alt=""
               />
