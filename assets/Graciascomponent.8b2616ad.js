@@ -1,0 +1,1 @@
+import{a,F as r,j as e,N as s}from"./index.d6dfecee.js";const n=()=>a(r,{children:[e(s,{}),e("div",{className:"h-full flex justify-center gap-4 items-center flex-col ",children:e("h1",{className:"text-2xl  md:text-2xl text-center",children:"Gracias por preferirnos como tu tienda de confianza, tu compra se estar\xE1 enviando en las pr\xF3ximas horas."})})]});export{n as default};
