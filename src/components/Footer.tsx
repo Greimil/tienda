@@ -57,7 +57,7 @@ export const Footer: FC = () => {
 
       <div className="bg-blackPrimary h-16 md:h-20 1 text-seconday  flex items-center  justify-center">
         <a href="http://" target="_blank" rel="noopener noreferrer">
-          {"@GreyDev"}
+          {"Creado por Greimil Nunez Y Runiel Martinez"}
         </a>
       </div>
     </footer>
